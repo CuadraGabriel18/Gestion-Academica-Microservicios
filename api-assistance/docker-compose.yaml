@@ -1,0 +1,12 @@
+services:
+  mongodb-assistance:
+    image: mongo:latest
+    container_name: mongodb-assistance
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: Gabriel
+      MONGO_INITDB_ROOT_PASSWORD: 123
+    ports:
+      - "27019:27017"
+    volumes:
+      - ./mongodb_data:/data/db

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asistencia del Curso - Maestro</title>
+  <link rel="stylesheet" href="css/course_teacher.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="js/course_teacher.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📘 Asistencia - Curso</h1>
+      <button onclick="goBack()">← Volver</button>
+    </header>
+
+    <main>
+      <!-- 👨‍🏫 Maestro -->
+      <div class="section-box">
+        <h2>👨‍🏫 Maestro del Curso</h2>
+        <p><strong>Responsable:</strong> <span id="teacherName">Cargando...</span></p>
+      </div>
+
+      <!-- 📋 Información del Curso -->
+      <div class="section-box">
+        <h2>📋 Información del Curso</h2>
+        <p><strong>Curso:</strong> <span id="courseName">Cargando...</span></p>
+        <p><strong>Periodo:</strong> <span id="coursePeriod">Cargando...</span></p>
+      </div>
+
+      <!-- ⏰ Horario de Asistencia -->
+      <div class="section-box">
+        <h2>🕒 Horario de Asistencia</h2>
+        <p id="asistenciaMessage">⌛ Cargando horario...</p>
+        <div id="asistenciaCerrada" style="display:none; color: red; font-weight: bold;">
+          🚫 El horario para registrar asistencia ha finalizado.
+        </div>
+      </div>
+
+      <!-- 🗓️ Registrar Asistencia -->
+      <div class="section-box">
+        <h2>🗕 Registrar Asistencia</h2>
+        <p><strong>Fecha:</strong> <span id="fechaActual">Cargando...</span></p>
+
+        <table class="attendance-table">
+          <thead>
+            <tr>
+              <th>Estudiante</th>
+              <th>Email</th>
+              <th>Estado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="studentAttendanceBody">
+            <!-- Rellenado dinámicamente -->
+          </tbody>
+        </table>
+
+        <button class="btn-download" onclick="downloadAttendanceReport()">📥 Descargar Asistencia</button>
+      </div>
+
+      <!-- 📋 Lista de Estudiantes -->
+      <div class="section-box">
+        <h2>📄 Lista de Estudiantes</h2>
+        <button class="btn-download" onclick="downloadStudentList()">📄 Descargar Lista</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Iniciar Sesión - Auth API</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="js/login.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Correo Electrónico" required />
+      <input type="password" id="loginPassword" placeholder="Contraseña" required />
+      <button type="submit">Login</button>
+    </form>
+    <button class="google" id="googleLoginLogin">Iniciar Sesión con Google</button>
+    <span class="toggle-link" onclick="window.location.href='register.html'">¿No tienes cuenta? Regístrate</span>
+    <div id="errorLogin" style="color:red;"></div>
+  </div>
+</body>
+</html>

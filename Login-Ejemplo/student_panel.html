@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel del Estudiante</title>
+  <link rel="stylesheet" href="css/student.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="js/dashboard_student.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">🎓 EstudiantePanel</div>
+    <ul>
+      <li onclick="navigate('dashboard')">🏠 Dashboard</li>
+      <li onclick="navigate('join')">🔑 Unirse a Curso</li>
+      <li onclick="navigate('courses')">📚 Mis Cursos</li>
+      <li onclick="logout()">🚪 Cerrar sesión</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <!-- 🏠 Bienvenida -->
+    <section id="dashboard" class="section active">
+      <h2>👋 Bienvenido, Estudiante</h2>
+      <div class="card">
+        Aquí puedes unirte a un curso con un código o ver tus cursos actuales.<br>
+        <strong>Nota:</strong> La asistencia será tomada automáticamente por el maestro según el horario configurado.
+      </div>
+    </section>
+
+    <!-- 🔑 Unirse a un curso -->
+    <section id="join" class="section">
+      <div class="card join-card">
+        <h2>🔑 Unirse a un Curso</h2>
+        <form id="joinForm" class="join-form">
+          <input type="text" id="joinCodeInput" placeholder="Código del curso" required />
+          <button type="submit">Unirse</button>
+        </form>
+        <p id="joinMessage" class="join-message"></p>
+      </div>
+    </section>
+
+    <!-- 📚 Lista de cursos -->
+    <section id="courses" class="section">
+      <h2>📚 Mis Cursos</h2>
+      <div class="card">
+        <table id="studentCourseTable">
+          <thead>
+            <tr>
+              <th>Curso</th>
+              <th>Periodo</th>
+              <th>JoinCode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cursos del estudiante serán insertados aquí dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

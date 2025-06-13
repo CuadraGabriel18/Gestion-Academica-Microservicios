@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    height: 100vh;
+    background: #1e1e2f;
+    color: #fff;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: #111;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #00e1d6;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #222;
+    transition: 0.2s;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #222;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  h2, h3 {
+    color: #00e1d6;
+  }
+  
+  .card {
+    background: #2c2c3e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #2c2c3e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #00e1d6;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    background-color: #00c1b6;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2c2c3e;
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+  
+  th {
+    background-color: #1a1a28;
+    color: #00e1d6;
+  }
+  
+  tr:hover {
+    background-color: #333;
+  }
+  

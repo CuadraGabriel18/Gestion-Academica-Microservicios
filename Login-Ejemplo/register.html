@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Auth API</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="js/register.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Regístrate</h2>
+    <form id="registerForm">
+      <input type="text" id="registerUsername" placeholder="Nombre Completo" required>
+      <input type="email" id="registerEmail" placeholder="Correo Electrónico" required>
+      <input type="password" id="registerPassword" placeholder="Contraseña" required>
+      <select id="registerRole" required>
+        <option value="" disabled selected>Selecciona tu rol</option>
+        <option value="teacher">Maestro</option>
+        <option value="student">Estudiante</option>
+      </select>
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <label for="googleRole"><strong>Selecciona tu rol antes de registrarte con Google:</strong></label>
+    <select id="googleRole" required>
+      <option value="" disabled selected>Selecciona tu rol</option>
+      <option value="teacher">Maestro</option>
+      <option value="student">Estudiante</option>
+    </select>
+    <button class="google" id="googleLoginRegister">Registrarse con Google</button>
+
+    <span class="toggle-link" onclick="window.location.href='login.html'">¿Ya tienes cuenta? Inicia Sesión</span>
+    <div id="errorRegister" style="color:red;"></div>
+  </div>
+</body>
+</html>
